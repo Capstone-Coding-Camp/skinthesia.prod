@@ -127,8 +127,6 @@ const init = async () => {
     server.route(routes);
 
     await server.start();
-    console.log('Server running on %s', server.info.uri);
-    console.log('Dokumentasi API tersedia di %s/documentation', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {
