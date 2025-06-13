@@ -134,4 +134,7 @@ process.on('unhandledRejection', (err) => {
     process.exit(1);
 });
 
-init();
+// Tambahkan log saat server berhasil dijalankan
+init().then(() => {
+    console.log('Server berjalan pada:', `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`);
+});
