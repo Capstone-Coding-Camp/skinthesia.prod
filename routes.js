@@ -33,31 +33,21 @@ const routes = [
     handler: getStaticContent,
     options: getStaticContentOption,
   },
-  // Route untuk melayani avatar yang diupload (DIHAPUS, karena data biner di DB)
-  // {
-  //     method: 'GET',
-  //     path: '/uploads/avatars/{param*}',
-  //     handler: getUploadedAvatars,
-  //     options: {
-  //         tags: ['api', 'files'],
-  //         description: 'Akses file avatar yang diupload'
-  //     }
-  // },
   {
     method: 'POST',
-    path: '/register',
+    path: '/api/register',
     handler: registerHandler,
     options: registerHandlerOption,
   },
   {
     method: 'POST',
-    path: '/login',
+    path: '/api/login',
     handler: loginHandler,
     options: loginHandlerOption,
   },
   {
     method: 'POST',
-    path: '/refresh-token',
+    path: '/api/refresh-token',
     handler: refreshTokensHandler,
     options: {
       ...refreshTokensHandlerOption,
